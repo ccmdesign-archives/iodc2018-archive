@@ -1,0 +1,68 @@
+.logo {
+  @include breakpoint($medium-up) {
+    float: left;
+    max-width: 400px;
+  }
+}
+
+.social-media {
+  @include breakpoint($medium-up) { 
+    float: right; 
+    margin-top: 0;
+  }
+  margin-top: 20px;
+  display: inline-block;
+  height: 100%;
+
+  img {
+    height: 35px;
+    opacity: 0.2;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: 0.5s opacity;
+
+    a:first-child img { margin-left: 0; }
+  }
+
+  a:hover img { opacity: 1; }
+}
+    
+
+.callout {
+  margin-top: 5vh;
+  margin-bottom: 15vh;
+
+  @include breakpoint($medium-up) { margin-top: 11vw; }
+
+  h1 {
+    font-weight: 100;
+    font-size: 2.75rem;
+    line-height: 1.2;
+    margin: 0;
+
+    @include breakpoint($medium-up) { font-size: 8rem; }
+  }
+
+  h4 {
+    @include breakpoint($medium-up) { 
+      font-size: 3rem; 
+      font-weight: 100;
+    }
+    
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+  
+  &--small {
+    margin-top: 10vh;  
+    margin-bottom: 7vh;
+
+    @include breakpoint($medium-up) { margin-top: 0 }
+    
+    h1 { 
+      @include breakpoint($medium-up) { font-size: 5rem; }
+    }
+  }
+}

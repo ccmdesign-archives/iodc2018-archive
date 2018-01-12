@@ -1,0 +1,32 @@
+.past-events {
+  @include breakpoint($medium-up) { 
+    padding-bottom: 250px;
+    border-top: 0;
+  }
+
+  h2 {
+    @include breakpoint($medium-up) { margin-bottom: 40px; }
+  }
+
+  a {
+    max-width: 70%;
+    display: inline-block;
+    margin-bottom: 30px;
+
+    @include breakpoint($medium-up) { 
+      margin: 0 40px;
+      opacity: .3;
+      &:hover { opacity: 1; }
+    }
+  }
+
+  &--iodc16 img {
+    max-height: 120px;
+  }
+
+  &--iodc15 img {
+    @include breakpoint($medium-up) { 
+      max-height: 100px;
+    }
+  }
+}

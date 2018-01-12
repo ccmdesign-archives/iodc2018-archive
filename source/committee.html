@@ -1,0 +1,33 @@
+---
+layout: default
+title: IODC18
+---
+
+<main role="main" class="wrapper"> <!-- main content starts here -->
+
+  <div class="callout callout--small">
+    <h1>Programme Committee</h1>  
+  </div>
+  
+  <ul class="section people-list">
+    
+      {% for i in site.data.committee %}
+      <li>
+        <p class="people-list__name">{{i.name}}</p>
+        <p class="people-list__org">{{i.org}}</p>
+      </li>
+      {% endfor %}    
+    
+  </ul>
+
+  <div class="section">
+    <a class="button" href="form.html">Register</a>
+    <a class="button" href="form.html">Submit Proposal</a>
+  </div>
+</main>
+
+
+
+
+
+

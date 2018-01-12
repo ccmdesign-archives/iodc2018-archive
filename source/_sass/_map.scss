@@ -1,0 +1,27 @@
+.map {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  @include breakpoint($medium-up) { top: 9vw; }
+  top: 31vh;
+  left: 0;
+  z-index: 0;
+  text-align: center;
+  
+  svg {
+    width: 100%;
+    @include breakpoint($medium-up) { width: 60%; }
+
+    path { 
+      fill: rgba(white, .05);
+      transition: 1.5s all;
+    }
+    
+    .js-map--on,
+    path:hover { 
+      fill: $yellow;
+      transition: 0.2s all;
+      stroke: 4px solid $yellow;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.form {
+  text-align: left;
+
+  @include breakpoint($medium-up) { 
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  label { 
+    font-size: 1.2rem; 
+    display: block;
+  }
+
+  label + label { padding-top: 20px; }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    background-color: transparent;
+    webkit-appearance: none;
+    border-radius: 0;
+    width: 100%;
+    border: 1px solid rgba(white, .5);
+    padding: 10px;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    webkit-appearance: none;
+    outline: 0;
+    border-color: $yellow;
+  }
+
+  textarea {
+    min-height: 200px;
+  }
+}
