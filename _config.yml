@@ -17,7 +17,7 @@ title:
 email: 
 description: > # this means to ignore newlines until "baseurl:"
   
-baseurl: "/iodc18-jekyll" # the subpath of your site, e.g. /blog
+baseurl: "/iodc2018" # the subpath of your site, e.g. /blog
 url: "https://ccmdesign.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  
