@@ -34,5 +34,5 @@ exclude:
 
 # Folder Structure
 source: ./source
-destination: _site/iodc2018
+destination: _site/
 # sass_dir: source/css
