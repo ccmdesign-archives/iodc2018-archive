@@ -15,7 +15,6 @@ h2 {
 
 .bg {
   background-color: #0e0f13;
-  background-image: url("/images/bg.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -26,7 +25,7 @@ h2 {
   z-index: -2; }
 
 .wrapper {
-  padding: 40px;
+  padding: 0 40px;
   text-align: center; }
 
 .section {
@@ -59,36 +58,75 @@ h2 {
   .button:hover {
     background-color: rgba(0, 200, 255, 0.2); }
 
-@media (min-width: 40.063em) {
-  .logo {
-    float: left;
-    max-width: 400px; } }
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px; }
+  .header .lang {
+    order: 1; }
+  .header .social-media {
+    order: 2; }
+  .header .logo {
+    order: 3; }
+  @media (min-width: 40.063em) {
+    .header {
+      flex-direction: row;
+      padding-top: 40px; }
+      .header .logo {
+        flex: 1;
+        order: 1; }
+      .header .social-media {
+        order: 2; }
+      .header .lang {
+        order: 3; } }
+
+.logo {
+  margin-top: 16vh; }
+  @media (min-width: 40.063em) {
+    .logo {
+      text-align: left;
+      margin-top: 0; }
+      .logo img {
+        max-width: 400px; } }
 
 .social-media {
-  margin-top: 20px;
+  margin: 0;
   display: inline-block;
   height: 100%; }
-  @media (min-width: 40.063em) {
-    .social-media {
-      float: right;
-      margin-top: 0; } }
+  .social-media a {
+    display: inline-block;
+    margin: 5px; }
   .social-media img {
     height: 35px;
     opacity: 0.2;
-    margin-left: 20px;
-    margin-top: 20px;
     transition: 0.5s opacity; }
-    .social-media img a:first-child img {
-      margin-left: 0; }
   .social-media a:hover img {
     opacity: 1; }
 
+.lang {
+  color: rgba(255, 255, 255, 0.2);
+  padding: 0;
+  margin: 0 0 10px 0; }
+  @media (min-width: 40.063em) {
+    .lang {
+      margin: 0 30px; } }
+  .lang a {
+    color: rgba(255, 255, 255, 0.2);
+    display: inline-block; }
+    .lang a:hover {
+      color: white; }
+    .lang a.lang--active {
+      color: #ffcc00; }
+    @media (min-width: 40.063em) {
+      .lang a {
+        padding: 10px; } }
+
 .callout {
   margin-top: 5vh;
-  margin-bottom: 15vh; }
+  margin-bottom: 10vh; }
   @media (min-width: 40.063em) {
     .callout {
-      margin-top: 11vw; } }
+      margin-top: 8vw; } }
   .callout h1 {
     font-weight: 100;
     font-size: 2.75rem;
@@ -106,6 +144,10 @@ h2 {
       .callout h4 {
         font-size: 3rem;
         font-weight: 100; } }
+  .callout h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 100; }
   .callout--small {
     margin-top: 10vh;
     margin-bottom: 7vh; }
@@ -117,7 +159,9 @@ h2 {
         font-size: 5rem; } }
 
 .main-menu {
-  padding-bottom: 35px; }
+  padding-bottom: 35px;
+  position: relative;
+  z-index: 2; }
 
 @media (min-width: 40.063em) {
   .partners {
