@@ -14,19 +14,24 @@
   </head>
 
   <body>
-    <div class="bg"></div>
+    <div class="bg" style="background-image: url(' {{"/images/bg.jpg" | relative_url }} ');"></div>
     <div class="map">{% include map.html %}</div>
 
-    <div class="wrapper">
+    <div class="wrapper header">
       <div class="logo">
         <a href="/"><img src="{{ '/images/logo-blue-white.png' | relative_url }}" alt="IODC18"></a>
       </div>
+      
       <div class="social-media">
         <a target="_blank" href="https://www.youtube.com/channel/UC8cKSDSxKSbOnKliM_MhZmQ"><img src="{{ '/images/youtube.png' | relative_url }}" alt="youtube icon"></a>
         <a target="_blank" href="https://www.facebook.com/opendatacon/"><img src="{{ '/images/facebook.png' | relative_url }}" alt="facebook icon"></a>
         <a target="_blank" href="https://twitter.com/opendatacon"><img src="{{ '/images/twitter.png' | relative_url }}" alt="twitter icon"></a>
         <a target="_blank" href="https://www.flickr.com/photos/144810968@N02/albums"><img src="{{ '/images/flickr.png' | relative_url }}" alt="flickr icon"></a>
       </div>
+      <div class="lang">
+        <a class="lang-en lang--active" href="#">EN</a> | <a class="lang-es" href="#">ES</a>
+      </div>
+
     </div>
       
       {{content}}

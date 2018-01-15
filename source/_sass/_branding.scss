@@ -1,38 +1,80 @@
+.header {
+  display: flex; 
+  flex-direction: column;
+  padding-top: 5px;
+
+  .lang { order: 1; }
+  .social-media { order: 2; }
+  .logo { order: 3; }
+
+  @include breakpoint($medium-up) { 
+    flex-direction: row;
+    padding-top: 40px;
+    
+    .logo { 
+      flex: 1; 
+      order: 1;
+    }
+    .social-media { order: 2; }
+    .lang { order: 3; }
+  }
+}
+
 .logo {
+  margin-top: 16vh;
+
   @include breakpoint($medium-up) {
-    float: left;
-    max-width: 400px;
+    text-align: left;
+    margin-top: 0;
+    img { max-width: 400px; }
   }
 }
 
 .social-media {
-  @include breakpoint($medium-up) { 
-    float: right; 
-    margin-top: 0;
-  }
-  margin-top: 20px;
+  margin: 0;
   display: inline-block;
   height: 100%;
+
+  a {
+    display: inline-block;
+    margin: 5px;
+  }
 
   img {
     height: 35px;
     opacity: 0.2;
-    margin-left: 20px;
-    margin-top: 20px;
     transition: 0.5s opacity;
-
-    a:first-child img { margin-left: 0; }
   }
 
   a:hover img { opacity: 1; }
+}
+
+.lang {
+  color: rgba(white, .2);
+  padding: 0;
+  margin: 0 0 10px 0;
+
+  @include breakpoint($medium-up) { margin: 0 30px; }
+
+  a {
+    color: rgba(white, .2);
+    display: inline-block;
+
+    &:hover { color: rgba(white, 1); }
+    &.lang--active { color: rgba($yellow, 1); }
+
+    @include breakpoint($medium-up) { 
+      padding: 10px;
+    }
+  }
 }
     
 
 .callout {
   margin-top: 5vh;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 
-  @include breakpoint($medium-up) { margin-top: 11vw; }
+  @include breakpoint($medium-up) { margin-top: 8vw; }
 
   h1 {
     font-weight: 100;
@@ -53,6 +95,12 @@
     font-weight: 300;
     margin: 0;
     padding: 0;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 100;
   }
   
   &--small {
